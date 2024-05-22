@@ -1,0 +1,28 @@
+---
+title: "Tarea 3.grafos-ASIES"
+author: "Ricardo Bardales"
+date: "2024-05-20"
+output: rmdformats::downcute
+---
+
+```{r}
+#install.packages("igraph")
+```
+
+```{r}
+rm(list = ls())
+library(igraph)
+```
+
+```{r}
+Grafo=read.graph("EliteNet.gml", format = "gml")
+```
+```{r}
+plot(Grafo,
+     layout=layout_with_fr, # algoritmo de layout
+     vertex.label.cex=1,    # Tamaño de las etiquetas 
+     edge.arrow.size=.4,    # Tamaño de las flechas 
+     edge.curved=.1         # Curvatura de las líneas 
+)
+```
+
